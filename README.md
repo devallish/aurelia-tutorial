@@ -15,9 +15,10 @@ There are a few things that could be a little better, the reference to bootstrap
 6. Open the project folder in VS Code.
 7. Open a terminal in VS Code using *Ctrl+'* keystroke.
 8. Change dir to src folder using *cd src*.
-9. Initialise a project using *yarn init*.  
-  a. This creates the package.json. 
-  b. Open the package.json in VS Code.
+9. Initialise a project using *yarn init* follow prompts.  
+  a. This creates the package.json.  
+  b. Open the package.json in VS Code.   
+  c. Delete the main: index.js line.   
 10. Add the dependencies using *yarn add aurelia-bootstrapper bootstrap@4.0.0-alpha.6 bootstrap-sass bootstrap-sass-loader*
 11. Add the dev dependecies using *yarn add aurelia-webpack-plugin css-loader html-loader node-sass sass-loader style-loader ts-loader typescript webpack webpack-dev-server url-loader file-loader –dev*
 12. Add to the package.json, after the devDependencies to following.
