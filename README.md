@@ -17,26 +17,25 @@
 10. Add the dependencies using *yarn add aurelia-bootstrapper bootstrap@4.0.0-alpha.6 bootstrap-sass bootstrap-sass-loader*
 11. Add the dev dependecies using *yarn add aurelia-webpack-plugin css-loader html-loader node-sass sass-loader style-loader ts-loader typescript webpack webpack-dev-server url-loader file-loader –dev*
 12. Add to the package.json, after the devDependencies to following.
-
+````
     "scripts": {
-    "web": "webpack-dev-server --config webpack.config.js --hot --inline"
-  }
-
+        "web": "webpack-dev-server --config webpack.config.js --hot --inline"
+    }
+````
 13. The next 4 files and src folder are all added next to the package.json in the src folder.
 14. . Add a tsconfig.json file with the following.
-
-        {
+````
+    {
       "compilerOptions": { 
         "target": "es5",
         "module": "commonjs",  
-        "lib": [ "es6", "dom" ],
-        
+        "lib": [ "es6", "dom" ],        
         "experimentalDecorators": true    
       }
     }
-
+````
 14. Add a webpack.config.json file with the following.
-
+````
     const path = require("path");
     const { AureliaPlugin } = require("aurelia-webpack-plugin");
     
@@ -66,9 +65,9 @@
         new AureliaPlugin({ includeAll: "src" })    
       ],
     };
-
+````
 15. Add a index.html with the following (note dodgy js references).
-
+````
     <!DOCTYPE html>
     <html>
         <head>
@@ -88,11 +87,11 @@
     body{
         background-color: $primary-color;
     }
-
+````
 17. Add the src folder.
 18. The next 3 and 2 folders files are added in the newly create src folder.
 19. Add a main.ts with the following.
-
+````
     import 'bootstrap/scss/bootstrap.scss';
     import '../site.scss';
     import 'aurelia-bootstrapper';
@@ -105,9 +104,10 @@
         
         aurelia.start().then(() => aurelia.setRoot());
     }
-
+````
 20. Add a app.ts with the following.
-import { AppRouter, RouterConfiguration } from 'aurelia-router';
+````
+    import { AppRouter, RouterConfiguration } from 'aurelia-router';
 
     export class App{
     
@@ -130,7 +130,7 @@ import { AppRouter, RouterConfiguration } from 'aurelia-router';
             ]);
         }
     }
-
+````
 21. Add a app.html with the following.
 ````
     <template>
@@ -160,23 +160,23 @@ import { AppRouter, RouterConfiguration } from 'aurelia-router';
 23. Add the shared folder.
 24. The next 2 files are added to home folder.
 25. Add the home.ts with the following.
-
+````
     export class Home{
         testMessage: string;
         constructor(){
             this.testMessage = 'Home Placeholder';
         }
     }
-
+````
 26. Add the home.html with the following.
-
+````
     <template>
         ${testMessage}
     </template>
-
+````
 27. The next 2 files are added to the shared folder.
 28. Add a main-nav.html with the following.
-
+````
     <template bindable="router,title">        
         <nav class="navbar navbar-main navbar-toggleable-md navbar-light bg-transparent py-0">
             <button class="navbar-toggler navbar-toggler-right" 
@@ -201,11 +201,13 @@ import { AppRouter, RouterConfiguration } from 'aurelia-router';
             </div>
         </nav>
     </template>
+````
 29. Add a footer-nav.html with the following.
-
+````
     <template>
         <h3>placeholder for footer</h3>
     </template>
+````
 30. In the terminal run *webpack* to check webpack transpiles correctly.
 31. In the terminal *run npm run web*.
 32. Open your browser to http://localhost:8000.
