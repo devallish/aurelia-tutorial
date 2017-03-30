@@ -2,10 +2,13 @@
 
 ## A small tutorial to get going with Aurelia.
 This tutorial makes use of following bits and bobs: VS Code, NPM, Yarn, Typescript, SASS, WebPack, Bootstrap (V4) and of course the mighty Aurelia. I created this as a record of some basic steps I go through to get a SPA up and running.  
+
 There are a few things that could be a little better, the reference to bootstraps js files isn't great and really needs to be included in the webpack configuration. I am still getting to grips with webpack so if anyone can advise please do so. I am also not totally sure that all the dependencies are in the right place in the package.json.  
+
 1. Install VS Code from [here](https://code.visualstudio.com/) or Insider version [here](https://code.visualstudio.com/insiders).
 2. Install NPM from [here](https://yarnpkg.com/lang/en/).
 3. Install Yarn from [here](https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm).
+4. Install WebPack from [here](https://webpack.js.org/guides/installation/).
 4. Create a project folder for your code.
 5. Create a src folder for your source code.  
   a. I typically create test, docs folder next to the src, but not for this tutorial.
