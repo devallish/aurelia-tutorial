@@ -39,7 +39,7 @@ There are a few things that could be a little better, the reference to bootstrap
       }
     }
 ````
-14. Add a webpack.config.json file with the following.
+15. Add a webpack.config.json file with the following.
 ````
     const path = require("path");
     const { AureliaPlugin } = require("aurelia-webpack-plugin");
@@ -71,7 +71,7 @@ There are a few things that could be a little better, the reference to bootstrap
       ],
     };
 ````
-15. Add a index.html with the following (note dodgy js references).
+16. Add a index.html with the following (note dodgy js references).
 ````
     <!DOCTYPE html>
     <html>
@@ -86,16 +86,17 @@ There are a few things that could be a little better, the reference to bootstrap
             </div>
         </body>
     </html>
-16. Add a site.scss with the following.
-
-     $primary-color: #8484ff;
+````
+17. Add a site.scss with the following.
+````
+    $primary-color: #8484ff;
     body{
         background-color: $primary-color;
     }
 ````
-17. Add the src folder.
-18. The next 3 and 2 folders files are added in the newly create src folder.
-19. Add a main.ts with the following.
+18. Add the src folder.
+19. The next 3 and 2 folders files are added in the newly create src folder.
+20. Add a main.ts with the following.
 ````
     import 'bootstrap/scss/bootstrap.scss';
     import '../site.scss';
@@ -110,7 +111,7 @@ There are a few things that could be a little better, the reference to bootstrap
         aurelia.start().then(() => aurelia.setRoot());
     }
 ````
-20. Add a app.ts with the following.
+21. Add a app.ts with the following.
 ````
     import { AppRouter, RouterConfiguration } from 'aurelia-router';
 
@@ -136,7 +137,7 @@ There are a few things that could be a little better, the reference to bootstrap
         }
     }
 ````
-21. Add a app.html with the following.
+22. Add a app.html with the following.
 ````
     <template>
         <require from="./shared/main-nav.html"></require>
@@ -161,10 +162,10 @@ There are a few things that could be a little better, the reference to bootstrap
         </div>    
     </template>
 ````
-22. Add the home folder.
-23. Add the shared folder.
-24. The next 2 files are added to home folder.
-25. Add the home.ts with the following.
+23. Add the home folder.
+24. Add the shared folder.
+25. The next 2 files are added to home folder.
+26. Add the home.ts with the following.
 ````
     export class Home{
         testMessage: string;
@@ -173,14 +174,14 @@ There are a few things that could be a little better, the reference to bootstrap
         }
     }
 ````
-26. Add the home.html with the following.
+27. Add the home.html with the following.
 ````
     <template>
         ${testMessage}
     </template>
 ````
-27. The next 2 files are added to the shared folder.
-28. Add a main-nav.html with the following.
+28. The next 2 files are added to the shared folder.
+29. Add a main-nav.html with the following.
 ````
     <template bindable="router,title">        
         <nav class="navbar navbar-main navbar-toggleable-md navbar-light bg-transparent py-0">
@@ -207,13 +208,13 @@ There are a few things that could be a little better, the reference to bootstrap
         </nav>
     </template>
 ````
-29. Add a footer-nav.html with the following.
+30. Add a footer-nav.html with the following.
 ````
     <template>
         <h3>placeholder for footer</h3>
     </template>
 ````
-30. In the terminal run *webpack* to check webpack transpiles correctly.
-31. In the terminal *run npm run web*.
-32. Open your browser to http://localhost:8000.
-33. Enjoy!
+31. In the terminal run *webpack* to check webpack transpiles correctly.
+32. In the terminal *run npm run web*.
+33. Open your browser to http://localhost:8000.
+34. Enjoy!
