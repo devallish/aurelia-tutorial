@@ -216,5 +216,5 @@ There are a few things that could be a little better, the reference to bootstrap
 ````
 31. In the terminal run *webpack* to check webpack transpiles correctly.
 32. In the terminal *run npm run web*.
-33. Open your browser to http://localhost:8000.
+33. Open your browser to http://localhost:8080.
 34. Enjoy!
